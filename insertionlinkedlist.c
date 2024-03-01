@@ -113,10 +113,10 @@ void insertNodeAtBeginning(int data)
     }
     else
     {
-        newNode->data = data; // Link data part
-        newNode->next = head; // Link address part
+        newNode->data = data;
+        newNode->next = head; 
 
-        head = newNode;          // Make newNode as first node
+        head = newNode;          
 
         printf("DATA INSERTED SUCCESSFULLY\n");
     }
