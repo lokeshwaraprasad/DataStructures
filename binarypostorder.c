@@ -24,6 +24,16 @@ void preOrder(struct  node* root){
     }
 }
 
+void postorder(struct node *root)
+{
+    if(root!=NULL)
+    {
+        postorder(root->left);
+        postorder(root->right);
+        printf("%d->",root->data);
+    }
+}
+
 int main(){
      
     // Constructing the root node - Using Function (Recommended)
@@ -44,7 +54,7 @@ int main(){
     p->right = p2;
     p1->left = p3;
     p1->right = p4;
-  printf("\n the preorder traversal follows the format of Root->left->right\n");
-    preOrder(p);
+  printf("\n the postorder traversal follows the format of LEFT ->RIGHT ->ROOT\n");
+    postorder(p);
     return 0;
 }
